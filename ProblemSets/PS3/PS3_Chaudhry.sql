@@ -27,7 +27,7 @@ CREATE TABLE datname (
 
 --Import CSV
 .mode CSV;
-.import FL_insurance_sample.csv datname;
+.import ./FL_insurance_sample.csv datname;
 
 --Part(b): Print out the first 10 rows of the data set
 SELECT * FROM datname LIMIT 10;
@@ -39,4 +39,4 @@ SELECT DISTINCT country FROM datname;
 SELECT AVG(tiv_2012 - tiv_2011) FROM datname
 
 --Part(e): Create a frequency table of the construction variable to see what fraction of buildings are made out of wood or some other material
-SELECT counstruction, COUNT(*) FROM datname GROUP BY construction;
+SELECT counstruction, COUNT(construction) AS FREQ, (COUNT(construction) *100.0 / (SELECT COUNT(*) FROM datname)) AS PCT FROM datname  GROUP BY construction;
