@@ -1,0 +1,57 @@
+\documentclass{article}
+
+% If you're new to LaTeX, here's some short tutorials:
+% https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+% https://en.wikibooks.org/wiki/LaTeX/Basics
+
+% Formatting
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+
+% Math
+% https://www.overleaf.com/learn/latex/Mathematical_expressions
+% https://en.wikibooks.org/wiki/LaTeX/Mathematics
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+% Images
+% https://www.overleaf.com/learn/latex/Inserting_Images
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+\usepackage{graphicx,float}
+
+% Tables
+% https://www.overleaf.com/learn/latex/Tables
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+
+% Algorithms
+% https://www.overleaf.com/learn/latex/algorithms
+% https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+
+% Code syntax highlighting
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+\usepackage{minted}
+\usemintedstyle{borland}
+
+% Title content
+\title{ECON 5253 Problem Set 4}
+\author{Ahmed Chaudhry}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Question No. 3}
+The table that I scraped tells us number and percentage of votes cast in the US Presidential Elections of 2020 to the four presidential and vice-presidential candidates, along with showing their party affiliation. 
+
+It is interesting to see that how close was the competition between the candidates from the two major political parties. The vote difference between the winning candidate Joe Biden from Democrats and the losing candidate Donald Trump from Republicans was just a little above 5\%.
+
+Since I am interested in studying the impact of electoral outcomes on policies, I typically keep on looking at voting distributions across various elections.
+For this particular exercise, I performed a Google search for the R code to save the data-frame as CVS file. 
+
+\section{Question No. 4}
+I used fredr and tidyverse packages to extract Oklahoma's Cleveland County's data on income inequality from 2010 to 2019. Since inequality is major social and economic concern, I wanted to see how prevalent it is in our county. The series I scrapped represents the ratio of the mean income for the highest quintile (top 20 percent) of earners divided by the mean income of the lowest quintile (bottom 20 percent) of earners. This ratio have been hovering around, first increasing to its highest point in the sample in 2012, then jumping down and up for the next two years, respectively. After 2014, inequality started decreasing and then again started rising in 2017.
+
+
+\end{document}
+
