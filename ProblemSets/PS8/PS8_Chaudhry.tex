@@ -1,0 +1,105 @@
+\documentclass{article}
+
+% If you're new to LaTeX, here's some short tutorials:
+% https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+% https://en.wikibooks.org/wiki/LaTeX/Basics
+
+% Formatting
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+\usepackage{booktabs}
+\usepackage{stfloats}
+
+% Math
+% https://www.overleaf.com/learn/latex/Mathematical_expressions
+% https://en.wikibooks.org/wiki/LaTeX/Mathematics
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+% Images
+% https://www.overleaf.com/learn/latex/Inserting_Images
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+\usepackage{graphicx,float}
+\usepackage[utf8]{inputenc}
+
+% Tables
+% https://www.overleaf.com/learn/latex/Tables
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+
+% Algorithms
+% https://www.overleaf.com/learn/latex/algorithms
+% https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+
+% Code syntax highlighting
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+\usepackage{minted}
+\usemintedstyle{borland}
+
+% Title content
+\title{ECON 5253 Problem Set 8}
+\author{Ahmed Chaudhry}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Question No. 5}
+The estimates of $\hat{\beta}$ are very close to the true $\beta$ with only a few values being different that too after two decimal places after zero.
+
+\section{Question No. 6}
+Again the estimates of true $\beta$ and $\hat{\beta}\_gradient$ are very close.
+
+\section{Question No. 7}
+The $\hat{\beta}\_BFGS$ estimates seems to be very imprecise and far away from true $\beta$.
+
+\section{Question No. 8}
+The $\hat{\beta}\_MLE$ estimates again are closer and very similar to true $\beta$.
+
+\section{Question No. 9}
+Similar to part 8, the $\hat{\beta}\_OLS$ estimates are very similar to the true $\beta$.
+
+\begin{table}[hbt!]
+\centering
+\begin{center}
+    \title{OLS estimates Q.9}
+\end{center}
+\begin{tabular}[t]{lc}
+\toprule
+  & Model 1\\
+\midrule
+X1 & 1.501\\
+ & \vphantom{9} (0.002)\\
+X2 & -0.999\\
+ & \vphantom{8} (0.002)\\
+X3 & -0.249\\
+ & \vphantom{7} (0.002)\\
+X4 & 0.749\\
+ & \vphantom{6} (0.002)\\
+X5 & 3.499\\
+ & \vphantom{5} (0.002)\\
+X6 & -2.001\\
+ & \vphantom{4} (0.002)\\
+X7 & 0.501\\
+ & \vphantom{3} (0.002)\\
+X8 & 1.001\\
+ & \vphantom{2} (0.002)\\
+X9 & 1.247\\
+ & \vphantom{1} (0.002)\\
+X10 & 1.998\\
+ & (0.002)\\
+\midrule
+Num.Obs. & 1e+05\\
+R2 & 0.991\\
+R2 Adj. & 0.991\\
+AIC & 145033.3\\
+BIC & 145138.0\\
+Log.Lik. & -72505.666\\
+F & 1077029.265\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\end{document}
+
