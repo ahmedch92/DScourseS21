@@ -1,0 +1,65 @@
+\documentclass{article}
+
+% If you're new to LaTeX, here's some short tutorials:
+% https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+% https://en.wikibooks.org/wiki/LaTeX/Basics
+
+% Formatting
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+\usepackage{booktabs}
+\usepackage{stfloats}
+
+% Math
+% https://www.overleaf.com/learn/latex/Mathematical_expressions
+% https://en.wikibooks.org/wiki/LaTeX/Mathematics
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+% Images
+% https://www.overleaf.com/learn/latex/Inserting_Images
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+\usepackage{graphicx,float}
+\usepackage[utf8]{inputenc}
+
+% Tables
+% https://www.overleaf.com/learn/latex/Tables
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+
+% Algorithms
+% https://www.overleaf.com/learn/latex/algorithms
+% https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+
+% Code syntax highlighting
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+\usepackage{minted}
+\usemintedstyle{borland}
+
+% Title content
+\title{ECON 5253 Problem Set 9}
+\author{Ahmed Chaudhry}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Question No. 7}
+The original housing dataset has 15 variables in which 14 are X variables. However, in housing\_training has a total of 75 variables, so the X variable difference is of about 60 variables.
+
+\section{Question No. 8}
+Optimal $\lambda$ (penalty parameter) = 0.00356\\
+In-sample RMSE = 0.220 \\
+Out-sample RMSE = 0.219 \\
+
+\section{Question No. 9}
+Optimal $\lambda$ (penalty parameter) = 0.0233\\
+Out-sample RMSE = 0.192 \\
+
+\section{Question No. 10}
+We cannot have a unique solution when predictors are more than observations. However, if we use RIDGE or LASSO regression, this problem can be catered to.
+
+Overall, I think for both LASSO and RIDGE we have somewhat handled the problem of Bias-Variance Trade-off.
+\end{document}
+
