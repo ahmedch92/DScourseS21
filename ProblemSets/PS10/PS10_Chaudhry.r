@@ -219,9 +219,9 @@ nnet_res <- nnet_wf %>%
   )
 
 # what is the best value of lambda?
-top_nnet  <- show_best(tree_nnet, metric = "accuracy")
-best_nnet <- select_best(tree_nnet, metric = "accuracy")
-final_decision_nnet <- finalize_workflow(tree_nnet,
+top_nnet  <- show_best(nnet_res, metric = "accuracy")
+best_nnet <- select_best(nnet_res, metric = "accuracy")
+final_decision_nnet <- finalize_workflow(nnet_wf,
                                          best_nnet
 )
 
@@ -267,9 +267,9 @@ knn_res <- knn_wf %>%
   )
 
 # what is the best value of lambda?
-top_knn  <- show_best(tree_knn, metric = "accuracy")
-best_knn <- select_best(tree_knn, metric = "accuracy")
-final_decision_knn <- finalize_workflow(tree_knn,
+top_knn  <- show_best(knn_res, metric = "accuracy")
+best_knn <- select_best(knn_res, metric = "accuracy")
+final_decision_knn <- finalize_workflow(knn_wf,
                                          best_knn
 )
 
@@ -343,5 +343,5 @@ svm_ans %<>% left_join(svm_test %>% slice(1),by=c(".metric",".estimator")) %>%
 #####################
 # combine answers
 #####################
-all_ans <- bind_rows(logit_ans,tree_ans,nnet_ans,knn_ans,svm_ans)
+all_ans <- bind_rows(logit_ans,tree_ans,nnet_ans,knn_ans, svm_ans)
 datasummary_df(all_ans %>% select(-.metric,-.estimator,-mean,-n,-std_err),output="latex") %>% print

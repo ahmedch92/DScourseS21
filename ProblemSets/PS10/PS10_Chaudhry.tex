@@ -1,0 +1,71 @@
+\documentclass{article}
+
+% If you're new to LaTeX, here's some short tutorials:
+% https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+% https://en.wikibooks.org/wiki/LaTeX/Basics
+
+% Formatting
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+\usepackage{booktabs}
+\usepackage{stfloats}
+
+% Math
+% https://www.overleaf.com/learn/latex/Mathematical_expressions
+% https://en.wikibooks.org/wiki/LaTeX/Mathematics
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+% Images
+% https://www.overleaf.com/learn/latex/Inserting_Images
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+\usepackage{graphicx,float}
+\usepackage[utf8]{inputenc}
+
+% Tables
+% https://www.overleaf.com/learn/latex/Tables
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+
+% Algorithms
+% https://www.overleaf.com/learn/latex/algorithms
+% https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+
+% Code syntax highlighting
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+\usepackage{minted}
+\usemintedstyle{borland}
+
+% Title content
+\title{ECON 5253 Problem Set 10}
+\author{Ahmed Chaudhry}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+All other parts are completed.
+
+\section{Question No. 9}
+
+SVM was taking a lot of time, so I dropped it from the following table.
+
+There is a difference in the range of about 0.01 to 0.02 for each of the estimates from different ML models. Overall, we can say that all the model predictions are pretty close.
+
+\begin{table}[hbt!]
+\centering
+\begin{tabular}[t]{llllllll}
+\toprule
+penalty & .estimate & alg & cost\_complexity & tree\_depth & min\_n & hidden\_units & neighbors\\
+\midrule
+0.00 & 0.85 & logit &  &  &  &  & \\
+ & 0.87 & tree & 0.00 & 15.00 & 10.00 &  & \\
+0.08 & 0.84 & nnet &  &  &  & 3.00 & \\
+ & 0.85 & knn &  &  &  &  & 27.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
+
